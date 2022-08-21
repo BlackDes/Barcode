@@ -1,0 +1,19 @@
+﻿<Window x:Class="_21._12._01._2.ShtrikhKodi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_21._12._01._2"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="ShtrikhKodi" Height="450" Width="445">
+
+    <Canvas x:Name="canvas">
+        <TextBox BorderBrush="{x:Null}" x:Name="tbxChisla" FontSize="40" Width="408" Height="60" Canvas.Left="10" Canvas.Top="151"/>
+        <Label x:Name="lblDvoichnie" FontSize="16" Height="50" Width="408" Canvas.Top="237" Canvas.Left="10"/>
+
+        <Button x:Name="btnPeregenirovanie" Content="Перегенерировать штрих-код" FontSize="16" Canvas.Left="10" Canvas.Top="326" Height="60" Width="408" Click="btnPeregenirovanie_Click"/>
+    </Canvas>
+
+</Window>

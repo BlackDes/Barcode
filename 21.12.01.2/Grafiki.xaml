@@ -1,0 +1,36 @@
+﻿<Window x:Class="_21._12._01._2.Grafiki"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_21._12._01._2"
+        mc:Ignorable="d"
+		
+		xmlns:wfi="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+		xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+		xmlns:dvc="clr-namespace:System.Windows.Forms.DataVisualization.Charting;assembly=System.Windows.Forms.DataVisualization"
+		
+		Title="Grafiki" Height="1000" Width="1040"
+        ResizeMode="NoResize"
+		WindowStartupLocation="CenterScreen">
+	<Canvas>
+		<WindowsFormsHost Height="800" Width="1000" Canvas.Left="10" Canvas.Top="10">
+			<dvc:Chart x:Name="chart"/>
+		</WindowsFormsHost>
+		<Label Content="Xmin" FontSize="16" Canvas.Left="315" Canvas.Top="836"/>
+		<Label Content="Xmax" FontSize="16" Canvas.Left="530" Canvas.Top="836"/>
+		<Label Content="Step" FontSize="16" Canvas.Left="734" Canvas.Top="836"/>
+
+		<Label Content="Богидаев (x^2+tan(5*x-0.8/x)):" FontSize="16" Canvas.Left="10" Canvas.Top="875"/>
+		<TextBox x:Name="tbxXminBogidaev" Height="30" Width="150" Canvas.Left="265" Canvas.Top="872"/>
+		<TextBox x:Name="tbxXmaxBogidaev" Height="30" Width="150" Canvas.Left="475" Canvas.Top="872"/>
+		<TextBox x:Name="tbxStepBogidaev" Height="30" Width="150" Canvas.Left="680" Canvas.Top="872"/>
+
+		<Label Content="Долгих (x+sqrt(|x^3+0.1-e^x|)):" FontSize="16" Canvas.Left="10" Canvas.Top="906"/>
+		<TextBox x:Name="tbxXminDolgikh" Height="30" Width="150" Canvas.Left="265" Canvas.Top="907"/>
+		<TextBox x:Name="tbxXmaxDolgikh" Height="30" Width="150" Canvas.Left="475" Canvas.Top="907"/>
+		<TextBox x:Name="tbxStepDolgikh" Height="30" Width="150" Canvas.Left="680" Canvas.Top="907"/>
+
+		<Button Content="Вывод" x:Name="btnOutput" Click="BtnOutput_Click" Height="30" Width="150" Canvas.Left="860" Canvas.Top="887"/>
+	</Canvas>
+</Window>
